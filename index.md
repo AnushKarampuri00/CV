@@ -45,6 +45,7 @@
 ## SKILLS
 
 ### Computational & Bioinformatics
+
 | Area | Tools |
 |----|------|
 | Programming & ML | Python, RF, SVM, PCA, Neural Networks |
@@ -52,6 +53,7 @@
 | Modeling & Analysis | Genomics analysis, predictive modeling |
 
 ### Experimental Biology
+
 | Area | Techniques |
 |----|-----------|
 | Cell & Molecular Biology | Mammalian cell culture (Per C6), PCR, electrophoresis |
