@@ -1,11 +1,12 @@
 # Anush Karampuri  
 
 📍 State College, PA  
-📧 anush.karampuri1@gmail.com
-📧 avk6712@psu.edu
-📞 +1 8146898861 
+📧 avk6712@psu.edu   
+📧 anush.karampuri1@gmail.com 
+📞 +1 8146898861  
 🔗 [LinkedIn](https://www.linkedin.com/in/anush-karampuri-31bb33199/)  
-🆔 [ORCID](https://orcid.org/0009-0002-7223-7683)  
+🆔 [ORCID](https://orcid.org/0009-0002-7223-7683)
+
 ---
 
 ## EDUCATION
