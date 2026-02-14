@@ -37,21 +37,24 @@ _Click on a publication title to expand and view details._
 <details>
 <summary><strong>2024 — ResisenseNet: Hybrid neural network for drug sensitivity prediction</strong></summary>
 
-- **Journal:** *Scientific Reports* [PubMed](https://pubmed.ncbi.nlm.nih.gov/39397003/)  
+<p><strong>Journal:</strong> <em>Scientific Reports</em> —
+<a href="https://pubmed.ncbi.nlm.nih.gov/39397003/" target="_blank">PubMed</a></p>
 
 </details>
 
 <details>
 <summary><strong>2024 — Multimodal Deep Learning approach for breast cancer drug discovery</strong></summary>
 
-- **Journal:** *Computers in Biology and Medicine* [PubMed](https://pubmed.ncbi.nlm.nih.gov/38288043/)  
+<p><strong>Journal:</strong> <em>Computers in Biology and Medicine</em> —
+<a href="https://pubmed.ncbi.nlm.nih.gov/38288043/" target="_blank">PubMed</a></p>
 
 </details>
 
 <details>
 <summary><strong>2023 — Breast cancer–specific combinational QSAR model</strong></summary>
 
-- **Journal:** *Frontiers in Bioinformatics* [PubMed](https://pubmed.ncbi.nlm.nih.gov/38642491/)  
+<p><strong>Journal:</strong> <em>Frontiers in Bioinformatics</em> —
+<a href="https://pubmed.ncbi.nlm.nih.gov/38642491/" target="_blank">PubMed</a></p>
 
 </details>
 
