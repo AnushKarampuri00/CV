@@ -1,34 +1,64 @@
 # Anush Karampuri  
-📍 Hyderabad, India | 📧 anush.karampuri1@gmail.com | 📞 +91 9959938676 | [LinkedIn](https://www.linkedin.com/in/anush-karampuri-31bb33199/)
 
+📍 State College, PA  
+📧 anush.karampuri1@gmail.com
+📧 avk6712@psu.edu
+📞 +1 8146898861 
+🔗 [LinkedIn](https://www.linkedin.com/in/anush-karampuri-31bb33199/)  
+🆔 [ORCID](https://orcid.org/0009-0002-7223-7683)  
 ---
 
 ## EDUCATION
 
-| Degree | Institution | Duration | Performance |
+| Degree | Institution | Duration | GPA |
 |------|------------|----------|-------------|
 | Ph.D. Bioinformatics & Genomics | Penn State University, USA | 2025 (Admitted) | — |
-| M.Tech Biotechnology | NIT Warangal | 2022 – 2024 | CGPA: 9.60 / 10 |
-| B.Tech Biotechnology | KL University | 2017 – 2021 | CGPA: 9.06 / 10 |
+| M.Tech Biotechnology | NIT Warangal | 2022 – 2024 | 3.88 |
+| B.Tech Biotechnology | KL University | 2017 – 2021 | 3.7 |
 
 ---
 
 ## WORK EXPERIENCE
 
-| Role | Organization | Duration | Key Work |
-|----|------------|----------|---------|
-| Project Associate | CSIR–CDRI, Lucknow | Nov 2024 – Present | ML-based structural & ligand-based drug discovery targeting **LDHC** for non-hormonal contraception |
-| Antigen Ad26 Viral Culture Executive | Biological E Pvt. Ltd. | Jul 2021 – Oct 2021 | Upstream manufacturing for **J&J COVID-19 vaccine** using 1000 L bioreactors |
+**Project Associate** — CSIR–CDRI, Lucknow  
+*Nov 2024 – July 2025*  
+- ML-based structural & ligand-based drug discovery  
+- Target: **LDHC** (non-hormonal male contraception)
+
+**Antigen Ad26 Viral Culture Executive** — Biological E Pvt. Ltd.  
+*Jul 2021 – Oct 2021*  
+- Upstream manufacturing of **J&J COVID-19 vaccine**  
+- Viral cultivation (Antigen Ad26) in large scale single use bioreactors (1000 L)
 
 ---
 
-## PUBLICATIONS (Selected)
+## PUBLICATIONS
 
-| Year | Title | Journal |
-|----|------|--------|
-| 2024 | ResisenseNet: Hybrid NN for drug sensitivity prediction | *Scientific Reports* |
-| 2024 | Multimodal DL for breast cancer drug discovery | *Computers in Biology and Medicine* |
-| 2023 | Breast cancer–specific combinational QSAR model | *Frontiers in Bioinformatics* |
+_Click on a publication title to expand and view details._
+
+<details>
+<summary><strong>2024 — ResisenseNet: Hybrid neural network for drug sensitivity prediction</strong></summary>
+
+- **Journal:** *Scientific Reports*  
+- **PubMed:** https://pubmed.ncbi.nlm.nih.gov/39397003/  
+
+</details>
+
+<details>
+<summary><strong>2024 — Multimodal Deep Learning approach for breast cancer drug discovery</strong></summary>
+
+- **Journal:** *Computers in Biology and Medicine*  
+- **PubMed:** https://pubmed.ncbi.nlm.nih.gov/38288043/  
+
+</details>
+
+<details>
+<summary><strong>2023 — Breast cancer–specific combinational QSAR model</strong></summary>
+
+- **Journal:** *Frontiers in Bioinformatics*  
+- **PubMed:** https://pubmed.ncbi.nlm.nih.gov/38642491/  
+
+</details>
 
 ---
 
@@ -47,17 +77,17 @@
 ### Computational & Bioinformatics
 
 | Area | Tools |
-|----|------|
-| Programming & ML | Python, RF, SVM, PCA, Neural Networks |
-| Drug Discovery | Schrödinger Suite, AlphaFold, Chimera, PDB |
-| Modeling & Analysis | Genomics analysis, predictive modeling |
+|------|------|
+| Programming & ML | Python, scikit-learn, neural networks |
+| Data Analysis | PCA, regression, classification |
+| Drug Discovery | Schrödinger, AlphaFold, Chimera, PDB |
 
 ### Experimental Biology
 
 | Area | Techniques |
-|----|-----------|
-| Cell & Molecular Biology | Mammalian cell culture (Per C6), PCR, electrophoresis |
-| Bioprocessing | 1000 L bioreactors, ViCell XR, chromatography |
+|------|-----------|
+| Cell & Molecular Biology | Mammalian cell culture (PER.C6), PCR, electrophoresis |
+| Upstream Processing | Viral cultivation, aseptic handling, cell counting |
 
 ---
 
@@ -65,10 +95,10 @@
 
 | Year | Award |
 |----|------|
-| 2025 | Graham Academic Award – $2,500 (Penn State) |
+| 2025 | Graham Academic Award - Pennsylvania state university |
 | 2024 | Salek Chand Memorial Scholarship – NIT Warangal |
 | 2022–24 | MHRD Fellowship, Government of India |
-| — | Graduated with Distinction (B.Tech & M.Tech) |
+| 2021 amd 2024 | Graduated with Distinction (B.Tech & M.Tech) |
 
 ---
 
