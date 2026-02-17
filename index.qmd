@@ -1,7 +1,12 @@
-# Anush Karampuri  
+---
+title: "Curriculum Vitae"
+description: "PhD Student in Bioinformatics & Genomics at Penn State University"
+---
 
-State College, PA | +1 814 689 8861  
-anush.karampuri1@gmail.com · avk6712@psu.edu  
+# Anush Karampuri
+
+State College, PA | +1 814 689 8861
+anush.karampuri1@gmail.com · avk6712@psu.edu
 [LinkedIn](https://www.linkedin.com/in/anush-karampuri-31bb33199/) · [ORCID](https://orcid.org/0009-0002-7223-7683)
 
 ---

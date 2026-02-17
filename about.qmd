@@ -1,0 +1,34 @@
+---
+title: "About Me"
+description: "Learn more about my background and research interests"
+---
+
+## Professional Summary
+
+I am a PhD student in Bioinformatics & Genomics at Penn State University, passionate about applying machine learning and computational methods to solve problems in drug discovery and genomics.
+
+My research interests include:
+
+- Machine learning for drug discovery
+- Deep learning in computational biology
+- Structural bioinformatics
+- Drug response prediction
+
+## Research Background
+
+I completed my M.Tech in Biotechnology from NIT Warangal with a focus on computational drug discovery, where I developed deep learning models for predicting drug sensitivity in breast cancer. My work has been published in journals including *Scientific Reports*, *Computers in Biology and Medicine*, and *Frontiers in Bioinformatics*.
+
+Currently, I am working as a Project Associate at CSIR-CDRI, Lucknow, focusing on ML-based drug discovery targeting LDHC for non-hormonal male contraception.
+
+## Contact
+
+Feel free to reach out to me:
+
+- **Email:** anush.karampuri1@gmail.com | avk6712@psu.edu
+- **LinkedIn:** [Anush Karampuri](https://www.linkedin.com/in/anush-karampuri-31bb33199/)
+- **ORCID:** [0009-0002-7223-7683](https://orcid.org/0009-0002-7223-7683)
+- **GitHub:** [AnushKarampuri00](https://github.com/AnushKarampuri00)
+
+## This Website
+
+This website serves as my professional portfolio, featuring my [CV](index.qmd) and [blog](posts.qmd) where I share insights about bioinformatics, computational methods, and my research journey.

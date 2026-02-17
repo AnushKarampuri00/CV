@@ -1,0 +1,58 @@
+/* Custom styles for Anush Karampuri's CV website */
+
+/* Improve table readability */
+table {
+  margin: 1.5rem 0;
+}
+
+table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+table td, table th {
+  padding: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+
+/* Style for details/summary elements (publications) */
+details {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-left: 3px solid #007bff;
+  background-color: #f8f9fa;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem;
+  user-select: none;
+}
+
+details summary:hover {
+  background-color: #e9ecef;
+}
+
+details[open] summary {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Improve heading spacing */
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+/* Contact info styling */
+.quarto-title-block .quarto-title-meta {
+  margin-top: 1rem;
+}
