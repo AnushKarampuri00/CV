@@ -1,58 +1,664 @@
-/* Custom styles for Anush Karampuri's CV website */
+/* ============================================================
+   Anush Karampuri — CV Website
+   Vibrant modern design inspired by dunks1980.com aesthetic
+   ============================================================ */
 
-/* Improve table readability */
-table {
-  margin: 1.5rem 0;
+/* ── Color Palette & Tokens ─────────────────────────────────── */
+:root {
+  --c-primary:   #6d28d9;
+  --c-secondary: #0ea5e9;
+  --c-accent:    #f43f5e;
+  --c-green:     #10b981;
+  --c-amber:     #f59e0b;
+  --c-dark:      #1e1b4b;
+  --c-bg:        #f5f4fb;
+  --c-surface:   #ffffff;
+  --c-text:      #1e1b4b;
+  --c-muted:     #64748b;
+  --c-border:    rgba(109, 40, 217, 0.12);
+
+  --grad-main:   linear-gradient(135deg, #6d28d9 0%, #0ea5e9 100%);
+  --grad-warm:   linear-gradient(135deg, #f43f5e 0%, #6d28d9 100%);
+  --grad-cool:   linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  --grad-gold:   linear-gradient(135deg, #f59e0b 0%, #f43f5e 100%);
+
+  --shadow-sm:   0 2px 12px rgba(109, 40, 217, 0.08);
+  --shadow-md:   0 6px 24px rgba(109, 40, 217, 0.14);
+  --shadow-lg:   0 16px 52px rgba(109, 40, 217, 0.22);
+
+  --radius:      14px;
+  --radius-lg:   22px;
+
+  /* Override Bootstrap primary */
+  --bs-primary:  #6d28d9;
+  --bs-link-color: #0ea5e9;
+  --bs-body-bg:  #f5f4fb;
+  --bs-body-color: #1e1b4b;
+  --bs-font-sans-serif: 'Montserrat', 'Space Grotesk', system-ui, sans-serif;
 }
 
-table th {
-  background-color: #f8f9fa;
-  font-weight: 600;
+/* ── Base ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-table td, table th {
-  padding: 0.75rem;
-  border: 1px solid #dee2e6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Style for details/summary elements (publications) */
-details {
-  margin: 1rem 0;
-  padding: 0.5rem;
-  border-left: 3px solid #007bff;
-  background-color: #f8f9fa;
+body {
+  font-family: 'Montserrat', 'Space Grotesk', system-ui, sans-serif;
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  line-height: 1.75;
+  font-size: 0.95rem;
 }
 
-details summary {
-  cursor: pointer;
-  font-weight: 500;
-  padding: 0.5rem;
-  user-select: none;
+::selection {
+  background: rgba(109, 40, 217, 0.18);
+  color: var(--c-dark);
 }
 
-details summary:hover {
-  background-color: #e9ecef;
+/* ── Scrollbar ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--c-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--grad-main);
+  border-radius: 4px;
 }
 
-details[open] summary {
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid #dee2e6;
+/* ── Navbar ─────────────────────────────────────────────────── */
+.navbar {
+  background: var(--grad-main) !important;
+  padding: 0.75rem 2rem !important;
+  box-shadow: 0 4px 24px rgba(109, 40, 217, 0.35) !important;
+  border-bottom: none !important;
 }
 
-/* Improve heading spacing */
-h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid #e9ecef;
+.navbar-brand,
+.navbar-brand:hover {
+  font-weight: 800 !important;
+  font-size: 1.15rem !important;
+  color: white !important;
+  letter-spacing: -0.3px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-h3 {
+.navbar .nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 600 !important;
+  font-size: 0.87rem !important;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 0.45rem 0.9rem !important;
+  border-radius: 8px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.18) !important;
+  transform: translateY(-1px);
+}
+
+/* Social icon links in navbar */
+.navbar .nav-link .bi,
+.navbar-nav .nav-link[href*="github"] .bi,
+.navbar-nav .nav-link[href*="linkedin"] .bi {
+  font-size: 1.1rem;
+  transition: transform 0.25s ease;
+}
+
+.navbar .nav-link:hover .bi {
+  transform: scale(1.25) rotate(-5deg);
+}
+
+/* ── Page Content Layout ────────────────────────────────────── */
+#quarto-content {
+  animation: fadeInUp 0.45s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Title Block ────────────────────────────────────────────── */
+#title-block-header.quarto-title-block {
+  background: var(--grad-main);
+  color: white;
+  padding: 3rem 2.5rem 2.5rem;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+#title-block-header.quarto-title-block::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#title-block-header.quarto-title-block::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: -30px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(244,63,94,0.18) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+#title-block-header .quarto-title h1.title {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.5px;
+  margin-bottom: 0.4rem;
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+}
+
+#title-block-header .description,
+#title-block-header .quarto-title-subtitle {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 1rem !important;
+  font-weight: 400;
+}
+
+/* Blog listing banner */
+.quarto-title-banner {
+  background: var(--grad-main) !important;
+  color: white !important;
+  padding: 2.5rem 2rem !important;
+}
+
+.quarto-title-banner h1.title {
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+}
+
+.quarto-title-banner .description {
+  color: rgba(255,255,255,0.82) !important;
+}
+
+/* ── Typography — Headings ──────────────────────────────────── */
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2.2rem;
+  background: var(--grad-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
-/* Contact info styling */
-.quarto-title-block .quarto-title-meta {
-  margin-top: 1rem;
+h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.78rem;
+  color: var(--c-muted);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 2.8rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: none;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(to right, var(--c-primary) 0%, var(--c-secondary) 50%, transparent 100%);
+  border-radius: 1px;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--c-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 1.8rem;
+  margin-bottom: 0.75rem;
+}
+
+h4, h5 {
+  font-weight: 600;
+  color: var(--c-dark);
+}
+
+/* ── Paragraphs & Text ──────────────────────────────────────── */
+p {
+  color: var(--c-text);
+  line-height: 1.8;
+}
+
+strong {
+  font-weight: 700;
+  color: var(--c-dark);
+}
+
+em {
+  color: var(--c-muted);
+}
+
+/* ── Links ──────────────────────────────────────────────────── */
+a {
+  color: var(--c-secondary) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--c-primary) !important;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+/* ── HR Dividers ────────────────────────────────────────────── */
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(109,40,217,0.25), rgba(14,165,233,0.25), transparent);
+  margin: 2rem 0;
+}
+
+/* ── Tables ─────────────────────────────────────────────────── */
+.table-responsive,
+table {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  margin: 1.5rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+}
+
+table th {
+  background: var(--grad-main);
+  color: white !important;
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 0.85rem 1rem;
+  border: none;
+}
+
+table td {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-bottom: 1px solid rgba(109, 40, 217, 0.07);
+  font-size: 0.9rem;
+  color: var(--c-text);
+  vertical-align: middle;
+}
+
+table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table tbody tr:hover {
+  background: linear-gradient(135deg,
+    rgba(109, 40, 217, 0.04) 0%,
+    rgba(14, 165, 233, 0.04) 100%);
+  transition: background 0.2s ease;
+}
+
+table tbody tr:nth-child(even) {
+  background: rgba(109, 40, 217, 0.025);
+}
+
+table tbody tr:nth-child(even):hover {
+  background: linear-gradient(135deg,
+    rgba(109, 40, 217, 0.06) 0%,
+    rgba(14, 165, 233, 0.06) 100%);
+}
+
+/* ── Details / Publications ─────────────────────────────────── */
+details {
+  margin: 1rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+  background: var(--c-surface);
+}
+
+details:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.93rem;
+  padding: 0.95rem 1.1rem 0.95rem 1.3rem;
+  background: white;
+  color: var(--c-dark);
+  user-select: none;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-left: 4px solid var(--c-primary);
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+details summary::-webkit-details-marker { display: none; }
+
+details summary::before {
+  content: '▸';
+  font-size: 0.7rem;
+  color: var(--c-primary);
+  transition: transform 0.25s ease, color 0.25s ease;
+  flex-shrink: 0;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg);
+  color: white;
+}
+
+details summary:hover {
+  background: linear-gradient(135deg,
+    rgba(109, 40, 217, 0.06) 0%,
+    rgba(14, 165, 233, 0.06) 100%);
+  color: var(--c-primary);
+}
+
+details[open] summary {
+  background: var(--grad-main);
+  color: white;
+  border-left-color: transparent;
+}
+
+details[open] summary:hover {
+  background: var(--grad-main);
+  color: white;
+}
+
+details[open] {
+  box-shadow: var(--shadow-md);
+}
+
+details > *:not(summary) {
+  padding: 1rem 1.3rem;
+  background: white;
+  border-top: 1px solid rgba(109, 40, 217, 0.08);
+  font-size: 0.92rem;
+  color: var(--c-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+details a {
+  color: var(--c-secondary) !important;
+  font-weight: 600;
+}
+
+details a:hover {
+  color: var(--c-primary) !important;
+}
+
+/* ── Lists ──────────────────────────────────────────────────── */
+ul, ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+  line-height: 1.75;
+}
+
+li::marker {
+  color: var(--c-primary);
+}
+
+/* ── Inline Code ────────────────────────────────────────────── */
+code {
+  background: rgba(109, 40, 217, 0.08);
+  color: var(--c-primary);
+  padding: 0.15rem 0.45rem;
+  border-radius: 6px;
+  font-size: 0.87em;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
+}
+
+/* ── Code Blocks ────────────────────────────────────────────── */
+pre {
+  background: var(--c-dark) !important;
+  border-radius: var(--radius) !important;
+  padding: 1.5rem !important;
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+pre code {
+  background: none;
+  color: #e2e8f0;
+  padding: 0;
+  font-size: 0.88em;
+}
+
+/* ── Blog Post Listing ──────────────────────────────────────── */
+.quarto-listing {
+  animation: fadeInUp 0.5s ease both;
+}
+
+.quarto-post {
+  background: var(--c-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--c-border);
+  overflow: hidden;
+  margin-bottom: 1.5rem !important;
+  transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
+  padding: 0 !important;
+}
+
+.quarto-post:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: rgba(109, 40, 217, 0.3);
+}
+
+.quarto-post .metadata {
+  padding: 1.2rem 1.4rem 0 !important;
+}
+
+.quarto-post .body {
+  padding: 0 1.4rem 1.4rem !important;
+}
+
+.quarto-post .listing-title a {
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  color: var(--c-dark) !important;
+  text-decoration: none !important;
+}
+
+.quarto-post .listing-title a:hover {
+  color: var(--c-primary) !important;
+  text-decoration: none !important;
+}
+
+.quarto-post .listing-description {
+  color: var(--c-muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Date */
+.quarto-post .listing-date,
+.listing-date {
+  color: var(--c-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Category badges */
+.quarto-post .listing-category,
+.listing-category {
+  background: linear-gradient(135deg, rgba(109,40,217,0.1), rgba(14,165,233,0.1)) !important;
+  color: var(--c-primary) !important;
+  border: 1px solid rgba(109,40,217,0.2) !important;
+  border-radius: 20px !important;
+  padding: 0.15rem 0.65rem !important;
+  font-size: 0.77rem !important;
+  font-weight: 700 !important;
+  margin-right: 0.35rem;
+  letter-spacing: 0.4px;
+  transition: background 0.2s ease, transform 0.2s ease !important;
+  cursor: default;
+}
+
+.quarto-post .listing-category:hover,
+.listing-category:hover {
+  background: var(--grad-main) !important;
+  color: white !important;
+  border-color: transparent !important;
+  transform: scale(1.04) !important;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.page-footer,
+footer.footer {
+  background: var(--c-dark) !important;
+  color: rgba(255,255,255,0.65) !important;
+  padding: 1.8rem 2rem !important;
+  font-size: 0.84rem;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-footer::before,
+footer.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--grad-main);
+}
+
+.page-footer a,
+footer.footer a {
+  color: rgba(255,255,255,0.8) !important;
+  font-weight: 500;
+}
+
+.page-footer a:hover,
+footer.footer a:hover {
+  color: white !important;
+}
+
+/* ── Sidebar (if present) ───────────────────────────────────── */
+#quarto-sidebar {
+  background: var(--c-surface);
+  border-right: 1px solid var(--c-border);
+}
+
+/* ── TOC ─────────────────────────────────────────────────────── */
+#TOC .nav-link {
+  color: var(--c-muted) !important;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease, padding-left 0.2s ease;
+  border-left: 2px solid transparent;
+}
+
+#TOC .nav-link:hover,
+#TOC .nav-link.active {
+  color: var(--c-primary) !important;
+  border-left-color: var(--c-primary);
+  padding-left: 0.8rem;
+  background: none !important;
+}
+
+/* ── Alert / Callout Blocks ─────────────────────────────────── */
+.callout {
+  border-radius: var(--radius);
+  border-left: 4px solid var(--c-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ── Quarto search ──────────────────────────────────────────── */
+#quarto-search input {
+  border-radius: 20px;
+  border: 1px solid var(--c-border);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+  }
+
+  #title-block-header.quarto-title-block {
+    padding: 2rem 1.2rem 1.8rem;
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
+
+  #title-block-header .quarto-title h1.title {
+    font-size: 1.5rem !important;
+  }
+
+  table td, table th {
+    padding: 0.6rem 0.75rem;
+  }
+
+  .navbar {
+    padding: 0.6rem 1rem !important;
+  }
+}
+
+/* ── Print ──────────────────────────────────────────────────── */
+@media print {
+  .navbar, footer { display: none; }
+  h2::after { background: #333 !important; }
+  body { background: white; color: black; }
 }

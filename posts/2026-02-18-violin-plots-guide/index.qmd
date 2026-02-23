@@ -46,6 +46,8 @@ Before creating one, it helps to understand every component:
        │            ← Thin line = extends to 1.5 × IQR (whiskers)
 ```
 
+![Anatomy of a violin plot with labeled components: minimum, Q1, median, Q3, maximum, IQR box, and density width.](violin_plot.png){fig-alt="Annotated violin plot showing a bimodal orange violin with arrows pointing to minimum (Q0), first quartile (Q1), median (Q2, white dot), third quartile (Q3), maximum (Q4), the IQR box, and a note that width approximates frequency." fig-align="center" width="75%"}
+
 | Component | Meaning |
 |---|---|
 | Width of the violin | Density of data at that value (KDE) |
