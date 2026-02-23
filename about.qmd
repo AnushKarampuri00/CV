@@ -18,7 +18,7 @@ My research interests include:
 
 I completed my M.Tech in Biotechnology from NIT Warangal with a focus on computational drug discovery, where I developed deep learning models for predicting drug sensitivity in breast cancer. My work has been published in journals including *Scientific Reports*, *Computers in Biology and Medicine*, and *Frontiers in Bioinformatics*.
 
-Currently, I am working as a Project Associate at CSIR-CDRI, Lucknow, focusing on ML-based drug discovery targeting LDHC for non-hormonal male contraception.
+Previously, I worked as a Project Associate at CSIR-CDRI, Lucknow, where I focused on ML-based drug discovery targeting LDHC for non-hormonal male contraception. I am currently a PhD student in Bioinformatics and Genomics at Pennsylvania State University.
 
 ## Contact
 
