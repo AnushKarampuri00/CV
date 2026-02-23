@@ -1,59 +1,56 @@
 /* ============================================================
    Anush Karampuri — CV Website
-   Vibrant modern design inspired by dunks1980.com aesthetic
+   4-color palette: Navy · Teal · Blue · Amber
    ============================================================ */
 
-/* ── Color Palette & Tokens ─────────────────────────────────── */
+/* ── Color Palette ──────────────────────────────────────────── */
 :root {
-  --c-primary:   #8b5cf6;           /* medium-bright purple — no gradient */
-  --c-primary-dark: #7c3aed;        /* slightly deeper for hover states   */
-  --c-secondary: #0ea5e9;
-  --c-accent:    #f43f5e;
-  --c-green:     #10b981;
-  --c-amber:     #f59e0b;
-  --c-dark:      #1e1b4b;
-  --c-bg:        #f5f4fb;
-  --c-surface:   #ffffff;
-  --c-text:      #1e1b4b;
-  --c-muted:     #64748b;
-  --c-border:    rgba(139, 92, 246, 0.14);
+  /* Four distinct accent roles */
+  --c-navy:    #0f172a;   /* navbar, footer, title blocks, table headers */
+  --c-teal:    #0d9488;   /* h2, section borders, scrollbar, details      */
+  --c-blue:    #2563eb;   /* h1, links, blog card hover                   */
+  --c-amber:   #d97706;   /* h3, progress bar, category badges            */
 
-  --shadow-sm:   0 2px 12px rgba(139, 92, 246, 0.09);
-  --shadow-md:   0 6px 24px rgba(139, 92, 246, 0.16);
-  --shadow-lg:   0 16px 52px rgba(139, 92, 246, 0.24);
+  /* Neutrals */
+  --c-bg:      #f8fafc;
+  --c-surface: #ffffff;
+  --c-text:    #1e293b;
+  --c-muted:   #64748b;
+  --c-dark:    #0f172a;
 
-  --radius:      14px;
-  --radius-lg:   22px;
+  /* Shadows — neutral, not tinted */
+  --shadow-sm: 0 2px 12px rgba(15, 23, 42, 0.07);
+  --shadow-md: 0 6px 24px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 16px 52px rgba(15, 23, 42, 0.18);
+
+  --radius:    14px;
+  --radius-lg: 22px;
 
   /* Bootstrap overrides */
-  --bs-primary:           #8b5cf6;
-  --bs-link-color:        #0ea5e9;
-  --bs-body-bg:           #f5f4fb;
-  --bs-body-color:        #1e1b4b;
-  --bs-font-sans-serif:   'Montserrat', 'Space Grotesk', system-ui, sans-serif;
+  --bs-primary:         #2563eb;
+  --bs-link-color:      #2563eb;
+  --bs-body-bg:         #f8fafc;
+  --bs-body-color:      #1e293b;
+  --bs-font-sans-serif: 'Montserrat', 'Space Grotesk', system-ui, sans-serif;
 }
 
-/* ── Scroll Progress Bar ────────────────────────────────────── */
+/* ── Scroll Progress Bar (amber — warm pop at top) ──────────── */
 #scroll-progress-bar {
   position: fixed;
   top: 0;
   left: 0;
   width: 0%;
   height: 4px;
-  background: var(--c-primary);
+  background: var(--c-amber);
   z-index: 99999;
   transition: width 0.07s linear;
   border-radius: 0 2px 2px 0;
 }
 
 /* ── Base ───────────────────────────────────────────────────── */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   font-family: 'Montserrat', 'Space Grotesk', system-ui, sans-serif;
@@ -64,23 +61,23 @@ body {
 }
 
 ::selection {
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(37, 99, 235, 0.15);
   color: var(--c-dark);
 }
 
-/* ── Scrollbar ──────────────────────────────────────────────── */
+/* ── Scrollbar (teal) ───────────────────────────────────────── */
 ::-webkit-scrollbar { width: 8px; }
 ::-webkit-scrollbar-track { background: var(--c-bg); }
 ::-webkit-scrollbar-thumb {
-  background: var(--c-primary);
+  background: var(--c-teal);
   border-radius: 4px;
 }
 
-/* ── Navbar ─────────────────────────────────────────────────── */
+/* ── Navbar (navy) ──────────────────────────────────────────── */
 .navbar {
-  background: var(--c-primary) !important;
+  background: var(--c-navy) !important;
   padding: 0.75rem 2rem !important;
-  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.35) !important;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.3) !important;
   border-bottom: none !important;
 }
 
@@ -90,11 +87,10 @@ body {
   font-size: 1.15rem !important;
   color: white !important;
   letter-spacing: -0.3px;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .navbar .nav-link {
-  color: rgba(255, 255, 255, 0.88) !important;
+  color: rgba(255, 255, 255, 0.8) !important;
   font-weight: 600 !important;
   font-size: 0.87rem !important;
   letter-spacing: 0.6px;
@@ -107,7 +103,7 @@ body {
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: white !important;
-  background: rgba(255, 255, 255, 0.18) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
   transform: translateY(-1px);
 }
 
@@ -120,7 +116,7 @@ body {
   transform: scale(1.25) rotate(-5deg);
 }
 
-/* ── Page Content Layout ────────────────────────────────────── */
+/* ── Page fade-in ───────────────────────────────────────────── */
 #quarto-content {
   animation: fadeInUp 0.45s ease both;
 }
@@ -130,9 +126,9 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Title Block ────────────────────────────────────────────── */
+/* ── Title Block (navy) ─────────────────────────────────────── */
 #title-block-header.quarto-title-block {
-  background: var(--c-primary);
+  background: var(--c-navy);
   color: white;
   padding: 3rem 2.5rem 2.5rem;
   border-radius: 0 0 var(--radius-lg) var(--radius-lg);
@@ -153,14 +149,14 @@ body {
 
 #title-block-header .description,
 #title-block-header .quarto-title-subtitle {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.78) !important;
   font-size: 1rem !important;
   font-weight: 400;
 }
 
-/* Blog listing banner */
+/* Blog banner (navy) */
 .quarto-title-banner {
-  background: var(--c-primary) !important;
+  background: var(--c-navy) !important;
   color: white !important;
   padding: 2.5rem 2rem !important;
 }
@@ -171,26 +167,28 @@ body {
 }
 
 .quarto-title-banner .description {
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgba(255, 255, 255, 0.78) !important;
 }
 
-/* ── Typography — Headings ──────────────────────────────────── */
+/* ── Headings ───────────────────────────────────────────────── */
+
+/* h1 — blue (identity, name) */
 h1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 2.2rem;
-  color: var(--c-primary);
+  color: var(--c-blue);
   letter-spacing: -0.5px;
   margin-top: 1.5rem;
   margin-bottom: 0.75rem;
 }
 
-/* Section headings — thicker and slightly larger */
+/* h2 — teal (section labels) */
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
   font-size: 0.92rem;
-  color: var(--c-primary);
+  color: var(--c-teal);
   text-transform: uppercase;
   letter-spacing: 2.5px;
   margin-top: 2.8rem;
@@ -207,16 +205,17 @@ h2::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: var(--c-primary);
-  opacity: 0.25;
+  background: var(--c-teal);
+  opacity: 0.22;
   border-radius: 1px;
 }
 
+/* h3 — amber (sub-section labels) */
 h3 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--c-secondary);
+  color: var(--c-amber);
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin-top: 1.8rem;
@@ -228,41 +227,31 @@ h4, h5 {
   color: var(--c-dark);
 }
 
-/* ── Paragraphs & Text ──────────────────────────────────────── */
-p {
-  color: var(--c-text);
-  line-height: 1.8;
-}
+/* ── Body text ──────────────────────────────────────────────── */
+p { color: var(--c-text); line-height: 1.8; }
+strong { font-weight: 700; color: var(--c-dark); }
+em { color: var(--c-muted); }
 
-strong {
-  font-weight: 700;
-  color: var(--c-dark);
-}
-
-em {
-  color: var(--c-muted);
-}
-
-/* ── Links ──────────────────────────────────────────────────── */
+/* ── Links (blue → teal on hover) ──────────────────────────── */
 a {
-  color: var(--c-secondary) !important;
+  color: var(--c-blue) !important;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
 }
 
 a:hover {
-  color: var(--c-primary) !important;
+  color: var(--c-teal) !important;
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
-/* ── HR Dividers ────────────────────────────────────────────── */
+/* ── HR dividers (teal tint) ────────────────────────────────── */
 hr {
   border: none;
   height: 1px;
-  background: rgba(139, 92, 246, 0.2);
+  background: rgba(13, 148, 136, 0.2);
   margin: 2rem 0;
 }
 
@@ -279,11 +268,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   background: var(--c-surface);
-  border: 1px solid var(--c-border);
+  border: 1px solid rgba(13, 148, 136, 0.14);
 }
 
+/* Table header — navy (matches navbar/footer for structural consistency) */
 table th {
-  background: var(--c-primary);
+  background: var(--c-navy);
   color: white !important;
   font-weight: 700;
   font-size: 0.78rem;
@@ -296,35 +286,33 @@ table th {
 table td {
   padding: 0.75rem 1rem;
   border: none;
-  border-bottom: 1px solid rgba(139, 92, 246, 0.07);
+  border-bottom: 1px solid rgba(13, 148, 136, 0.08);
   font-size: 0.9rem;
   color: var(--c-text);
   vertical-align: middle;
 }
 
-table tbody tr:last-child td {
-  border-bottom: none;
-}
+table tbody tr:last-child td { border-bottom: none; }
 
 table tbody tr:hover {
-  background: rgba(139, 92, 246, 0.05);
+  background: rgba(13, 148, 136, 0.05);
   transition: background 0.2s ease;
 }
 
 table tbody tr:nth-child(even) {
-  background: rgba(139, 92, 246, 0.025);
+  background: rgba(13, 148, 136, 0.028);
 }
 
 table tbody tr:nth-child(even):hover {
-  background: rgba(139, 92, 246, 0.06);
+  background: rgba(13, 148, 136, 0.07);
 }
 
-/* ── Details / Publications ─────────────────────────────────── */
+/* ── Details / Publications (teal accent) ───────────────────── */
 details {
   margin: 1rem 0;
   border-radius: var(--radius);
   overflow: hidden;
-  border: 1px solid var(--c-border);
+  border: 1px solid rgba(13, 148, 136, 0.18);
   box-shadow: var(--shadow-sm);
   transition: box-shadow 0.3s ease, transform 0.2s ease;
   background: var(--c-surface);
@@ -347,7 +335,7 @@ details summary {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  border-left: 4px solid var(--c-primary);
+  border-left: 4px solid var(--c-teal);
   transition: background 0.25s ease, color 0.25s ease;
 }
 
@@ -356,7 +344,7 @@ details summary::-webkit-details-marker { display: none; }
 details summary::before {
   content: '▸';
   font-size: 0.7rem;
-  color: var(--c-primary);
+  color: var(--c-teal);
   transition: transform 0.25s ease, color 0.25s ease;
   flex-shrink: 0;
 }
@@ -367,67 +355,50 @@ details[open] summary::before {
 }
 
 details summary:hover {
-  background: rgba(139, 92, 246, 0.06);
-  color: var(--c-primary);
+  background: rgba(13, 148, 136, 0.06);
+  color: var(--c-teal);
 }
 
 details[open] summary,
 details[open] summary:hover {
-  background: var(--c-primary);
+  background: var(--c-teal);
   color: white;
   border-left-color: transparent;
 }
 
-details[open] {
-  box-shadow: var(--shadow-md);
-}
+details[open] { box-shadow: var(--shadow-md); }
 
 details > *:not(summary) {
   padding: 1rem 1.3rem;
   background: white;
-  border-top: 1px solid rgba(139, 92, 246, 0.08);
+  border-top: 1px solid rgba(13, 148, 136, 0.1);
   font-size: 0.92rem;
   color: var(--c-muted);
   line-height: 1.75;
   margin: 0;
 }
 
-details a {
-  color: var(--c-secondary) !important;
-  font-weight: 600;
-}
-
-details a:hover {
-  color: var(--c-primary) !important;
-}
+details a { color: var(--c-blue) !important; font-weight: 600; }
+details a:hover { color: var(--c-teal) !important; }
 
 /* ── Lists ──────────────────────────────────────────────────── */
-ul, ol {
-  padding-left: 1.4rem;
-}
+ul, ol { padding-left: 1.4rem; }
+li { margin-bottom: 0.35rem; line-height: 1.75; }
+li::marker { color: var(--c-teal); }
 
-li {
-  margin-bottom: 0.35rem;
-  line-height: 1.75;
-}
-
-li::marker {
-  color: var(--c-primary);
-}
-
-/* ── Inline Code ────────────────────────────────────────────── */
+/* ── Inline code (teal tint) ────────────────────────────────── */
 code {
-  background: rgba(139, 92, 246, 0.09);
-  color: var(--c-primary);
+  background: rgba(13, 148, 136, 0.09);
+  color: var(--c-teal);
   padding: 0.15rem 0.45rem;
   border-radius: 6px;
   font-size: 0.87em;
   font-family: 'Fira Code', 'Cascadia Code', monospace;
 }
 
-/* ── Code Blocks ────────────────────────────────────────────── */
+/* ── Code blocks (dark) ─────────────────────────────────────── */
 pre {
-  background: var(--c-dark) !important;
+  background: var(--c-navy) !important;
   border-radius: var(--radius) !important;
   padding: 1.5rem !important;
   box-shadow: var(--shadow-md);
@@ -441,16 +412,14 @@ pre code {
   font-size: 0.88em;
 }
 
-/* ── Blog Post Listing ──────────────────────────────────────── */
-.quarto-listing {
-  animation: fadeInUp 0.5s ease both;
-}
+/* ── Blog listing ───────────────────────────────────────────── */
+.quarto-listing { animation: fadeInUp 0.5s ease both; }
 
 .quarto-post {
   background: var(--c-surface);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  border: 1px solid var(--c-border);
+  border: 1px solid rgba(13, 148, 136, 0.15);
   overflow: hidden;
   margin-bottom: 1.5rem !important;
   transition: box-shadow 0.3s ease, transform 0.25s ease, border-color 0.3s ease;
@@ -460,16 +429,11 @@ pre code {
 .quarto-post:hover {
   box-shadow: var(--shadow-md);
   transform: translateY(-4px);
-  border-color: rgba(139, 92, 246, 0.35);
+  border-color: rgba(37, 99, 235, 0.3);
 }
 
-.quarto-post .metadata {
-  padding: 1.2rem 1.4rem 0 !important;
-}
-
-.quarto-post .body {
-  padding: 0 1.4rem 1.4rem !important;
-}
+.quarto-post .metadata { padding: 1.2rem 1.4rem 0 !important; }
+.quarto-post .body { padding: 0 1.4rem 1.4rem !important; }
 
 .quarto-post .listing-title a {
   font-weight: 700 !important;
@@ -479,7 +443,7 @@ pre code {
 }
 
 .quarto-post .listing-title a:hover {
-  color: var(--c-primary) !important;
+  color: var(--c-blue) !important;
   text-decoration: none !important;
 }
 
@@ -496,12 +460,12 @@ pre code {
   font-weight: 500;
 }
 
-/* Category badges */
+/* Category badges — amber */
 .quarto-post .listing-category,
 .listing-category {
-  background: rgba(139, 92, 246, 0.1) !important;
-  color: var(--c-primary) !important;
-  border: 1px solid rgba(139, 92, 246, 0.22) !important;
+  background: rgba(217, 119, 6, 0.1) !important;
+  color: var(--c-amber) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
   border-radius: 20px !important;
   padding: 0.15rem 0.65rem !important;
   font-size: 0.77rem !important;
@@ -514,17 +478,17 @@ pre code {
 
 .quarto-post .listing-category:hover,
 .listing-category:hover {
-  background: var(--c-primary) !important;
+  background: var(--c-amber) !important;
   color: white !important;
   border-color: transparent !important;
   transform: scale(1.04) !important;
 }
 
-/* ── Footer ─────────────────────────────────────────────────── */
+/* ── Footer (navy + amber top border) ──────────────────────── */
 .page-footer,
 footer.footer {
-  background: var(--c-dark) !important;
-  color: rgba(255,255,255,0.65) !important;
+  background: var(--c-navy) !important;
+  color: rgba(255,255,255,0.6) !important;
   padding: 1.8rem 2rem !important;
   font-size: 0.84rem;
   border-top: none;
@@ -536,31 +500,24 @@ footer.footer {
 footer.footer::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  top: 0; left: 0; right: 0;
   height: 3px;
-  background: var(--c-primary);
+  background: var(--c-amber);
 }
 
 .page-footer a,
-footer.footer a {
-  color: rgba(255,255,255,0.8) !important;
-  font-weight: 500;
-}
+footer.footer a { color: rgba(255,255,255,0.78) !important; font-weight: 500; }
 
 .page-footer a:hover,
-footer.footer a:hover {
-  color: white !important;
-}
+footer.footer a:hover { color: white !important; }
 
 /* ── Sidebar ────────────────────────────────────────────────── */
 #quarto-sidebar {
   background: var(--c-surface);
-  border-right: 1px solid var(--c-border);
+  border-right: 1px solid rgba(13, 148, 136, 0.12);
 }
 
-/* ── TOC ─────────────────────────────────────────────────────── */
+/* ── TOC (blue active) ──────────────────────────────────────── */
 #TOC .nav-link {
   color: var(--c-muted) !important;
   font-size: 0.85rem;
@@ -571,23 +528,23 @@ footer.footer a:hover {
 
 #TOC .nav-link:hover,
 #TOC .nav-link.active {
-  color: var(--c-primary) !important;
-  border-left-color: var(--c-primary);
+  color: var(--c-blue) !important;
+  border-left-color: var(--c-blue);
   padding-left: 0.8rem;
   background: none !important;
 }
 
-/* ── Callout Blocks ─────────────────────────────────────────── */
+/* ── Callout blocks ─────────────────────────────────────────── */
 .callout {
   border-radius: var(--radius);
-  border-left: 4px solid var(--c-primary);
+  border-left: 4px solid var(--c-teal);
   box-shadow: var(--shadow-sm);
 }
 
-/* ── Quarto Search ──────────────────────────────────────────── */
+/* ── Search ─────────────────────────────────────────────────── */
 #quarto-search input {
   border-radius: 20px;
-  border: 1px solid var(--c-border);
+  border: 1px solid rgba(13, 148, 136, 0.2);
   padding: 0.3rem 0.9rem;
   font-size: 0.85rem;
 }
@@ -595,9 +552,7 @@ footer.footer a:hover {
 /* ── Responsive ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
   body { font-size: 0.9rem; }
-
   h1 { font-size: 1.7rem; }
-
   h2 { font-size: 0.83rem; }
 
   #title-block-header.quarto-title-block {
@@ -605,18 +560,15 @@ footer.footer a:hover {
     border-radius: 0 0 var(--radius) var(--radius);
   }
 
-  #title-block-header .quarto-title h1.title {
-    font-size: 1.5rem !important;
-  }
-
+  #title-block-header .quarto-title h1.title { font-size: 1.5rem !important; }
   table td, table th { padding: 0.6rem 0.75rem; }
-
   .navbar { padding: 0.6rem 1rem !important; }
 }
 
 /* ── Print ──────────────────────────────────────────────────── */
 @media print {
   .navbar, footer, #scroll-progress-bar { display: none; }
-  h2::after { background: #333 !important; }
   body { background: white; color: black; }
+  h2 { color: #0d9488; }
+  h2::after { background: #0d9488 !important; opacity: 0.3; }
 }
